@@ -5,23 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>second Grid</title>
     <link rel="stylesheet" href="styles.css">
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
-<body>
 
-    <div class="p-24 border-8 shadow-inner lg:grid grid-flow-col-dense">
-        <div class="border-8 shadow-xl w-80 h-96 p-2 mb-10 lg:mr-10 order-2">
-         <img class="w-20 p-1 pb-3" src="images/watch.jfif" alt="watch pic">
-         <h1 class="font-bold text-sm">Watch</h1>
-         <p class="text-gray-600 text-sm">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium quisquam at similique neque? Aspernatur, facilis eaque voluptatum laborum dolorem et consequatur, debitis necessitatibus exercitationem eum expedita cupiditate harum.</p>
+<body>
+    <div x-data="{ open : false }">
+        <div class="p-5 bg-black shadow-xl grid grid-cols-2 grid-rows-1 items-center lg:pl-10">
+            <div class="lg:hidden">
+                <button @click="open = !open" @click.away="open = false">
+                    <svg style="color: white;" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                  </button>
+            </div>
+            <div class="">
+                <img class="h-8 w-8" src="images/instagram.png" alt="">
+            </div>
+            <div class="text-white hidden lg:flex lg:justify-end">
+                <a href="index.html"><h1 class="pr-10">First</h1></a>
+                <a href="second.html"><h1 class="pr-10">Second</h1></a>
+                <a href="third.html"><h1 class="pr-10">Third</h1></a>
+                <a href="fourth.html"><h1 class="pr-10">Fourth</h1></a>
+            </div>
+
         </div>
-        <div class="border-8 shadow-xl w-80 h-64 p-2 mb-10 lg:w-96 order-1 mr-10">
-             <img class="w-20 p-1 pb-3" src="images/watch.jfif" alt="watch pic">
-             <h1 class="font-bold text-sm">Watch</h1>
-             <p class="text-gray-600 text-sm">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium quisquam at similique neque? Aspernatur, facilis eaque voluptatum laborum dolorem et consequatur, debitis necessitatibus exercitationem eum expedita cupiditate harum.</p>
+
+        <div x-show="open" class="bg-black text-white pl-5 pb-5 font-medium absolute w-full lg:hidden">
+            <a href="index.html"><h1 class="pb-2">First</h1></a>
+            <a href="second.html"><h1 class="pb-2">Second</h1></a>
+            <a href="third.html"><h1 class="pb-2">Third</h1></a>
+            <a href="fourth.html"><h1 class="">Fourth</h1></a>
         </div>
+
+    </div>
+
+    <div class="p-8 min-h-height bg-gray-100 shadow-md grid gap-6 grid-cols-1 grid-rows-2 lg:grid-cols-3 lg:grid-rows-1">
+       
+        <div class="p-2 bg-white shadow-md row-span-2 lg:order-2 lg:col-span-2">
+            <img class="" src="images/watch.jfif" alt="watch pic">
+            <h1 class="font-bold text-lg ">Watch</h1>
+            <p class="text-gray-600">Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                Quidem voluptatum ex minima iusto, eum amet natus! Blanditiis id unde vitae, 
+                accusamus adipisci, quasi nesciunt sequi dolorem quidem quae, iste qui.
+                
+            </p>
+        </div >
+        <div class="p-2 bg-white shadow-md lg:order-1">
+            <img class="" src="images/watch.jfif" alt="watch pic">
+            <h1 class="font-bold text-lg ">Watch</h1>
+            <p class="text-gray-600">Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                Quidem voluptatum ex minima iusto, eum amet natus! Blanditiis id unde vitae, 
+                accusamus adipisci, quasi nesciunt sequi dolorem quidem quae, iste qui. 
+                
+            </p>
+        </div>
+      
+            
+    </div>
         
-    </div>
-    </div>
+    
 
 </body>
 </html>

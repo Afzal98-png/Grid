@@ -5,25 +5,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fourth Grid</title>
     <link rel="stylesheet" href="styles.css">
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 <body>
+    <div x-data="{ open : false }">
+        <div class="p-5 bg-black shadow-xl grid grid-cols-2 grid-rows-1 items-center lg:pl-10">
+            <div class="lg:hidden">
+                <button @click="open = !open" @click.away="open = false">
+                    <svg style="color: white;" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                  </button>
+            </div>
+            <div class="">
+                <img class="h-8 w-8" src="images/instagram.png" alt="">
+            </div>
+            <div class="text-white hidden lg:flex lg:justify-end">
+                <a href="index.html"><h1 class="pr-10">First</h1></a>
+                <a href="second.html"><h1 class="pr-10">Second</h1></a>
+                <a href="third.html"><h1 class="pr-10">Third</h1></a>
+                <a href="fourth.html"><h1 class="pr-10">Fourth</h1></a>
+            </div>
 
-  <div class="p-2 m-auto border-8 border-black shadow-inner w-1/2 h-full grid gap-2 grid-cols-1 lg:grid-cols-4 grid-rows-2 justify-items-">
-    
-    <div class="bg-gray-500 border-8 border-black shadow-xl mb-10 lg:col-span-2">
-        1
+        </div>
+
+        <div x-show="open" class="bg-black text-white pl-5 pb-5 font-medium absolute w-full lg:hidden">
+            <a href="index.html"><h1 class="pb-2">First</h1></a>
+            <a href="second.html"><h1 class="pb-2">Second</h1></a>
+            <a href="third.html"><h1 class="pb-2">Third</h1></a>
+            <a href="fourth.html"><h1 class="">Fourth</h1></a>
+        </div>
+
     </div>
-    <div class="bg-gray-500 border-8 border-black shadow-xl mb-10">
-        2
-    </div>
-    <div class="bg-gray-500 border-8 border-black shadow-xl mb-10 lg:row-span-2 ">
-        3
-    </div>
-    <div class="bg-gray-500 border-8 border-black  shadow-xl mb-10">
-        4
-    </div>
-    <div class="bg-gray-500 border-8 border-black shadow-xl mb-10 lg:col-span-2">
-        5
+
+    <div class="bg-gray-100 p-8 shadow-md grid gap-6 grid-cols-1 lg:grid-cols-4 lg:grid-rows-2">
+            
+        <div class="p-2 bg-white shadow-md lg:col-span-2">
+            <img class="" src="images/watch.jfif" alt="watch pic">
+            <h1 class="font-bold text-lg ">Watch</h1>
+            <p class="text-gray-600">Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                Quidem voluptatum ex minima iusto, eum amet natus! Blanditiis id unde vitae, 
+                accusamus adipisci, quasi nesciunt sequi dolorem quidem quae, iste qui. Lorem 
+                ipsum dolor, sit amet consectetur adipisicing elit. Praesentium quisquam at similique neque? 
+                Aspernatur, facilis eaque voluptatum laborum dolorem et consequatur, debitis necessitatibus 
+                exercitationem eum expedita cupiditate harum.
+                
+            </p>
+        </div>
+            
+        <div class="p-2 bg-white shadow-md">
+            <img class="" src="images/watch.jfif" alt="watch pic">
+            <h1 class="font-bold text-lg ">Watch</h1>
+            <p class="text-gray-600">Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                Quidem voluptatum ex minima iusto, eum amet natus! Blanditiis id unde vitae, 
+                accusamus adipisci, quasi nesciunt sequi dolorem quidem quae, iste qui. Lorem 
+                ipsum dolor, sit amet consectetur adipisicing elit. Praesentium quisquam at similique neque? 
+                Aspernatur, facilis eaque voluptatum laborum dolorem et consequatur, debitis necessitatibus 
+                exercitationem eum expedita cupiditate harum.
+            </p>
+        </div>
+        <div class="p-2 bg-white shadow-md lg:row-span-2 ">
+            <img class="" src="images/watch.jfif" alt="watch pic">
+            <h1 class="font-bold text-lg ">Watch</h1>
+            <p class="text-gray-600">Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                Quidem voluptatum ex minima iusto, eum amet natus! Blanditiis id unde vitae, 
+                accusamus adipisci, quasi nesciunt sequi dolorem quidem quae, iste qui. Lorem 
+                ipsum dolor, sit amet consectetur adipisicing elit. Praesentium quisquam at similique neque? 
+                Aspernatur, facilis eaque voluptatum laborum dolorem et consequatur, debitis necessitatibus 
+                exercitationem eum expedita cupiditate harum.
+            </p>
+        </div>
+        <div class="p-2 bg-white shadow-md">
+            <img class="" src="images/watch.jfif" alt="watch pic">
+            <h1 class="font-bold text-lg ">Watch</h1>
+            <p class="text-gray-600">Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                Quidem voluptatum ex minima iusto, eum amet natus! Blanditiis id unde vitae, 
+                accusamus adipisci, quasi nesciunt sequi dolorem quidem quae, iste qui. Lorem 
+                ipsum dolor, sit amet consectetur adipisicing elit. Praesentium quisquam at similique neque? 
+                Aspernatur, facilis eaque voluptatum laborum dolorem et consequatur, debitis necessitatibus 
+                exercitationem eum expedita cupiditate harum.
+            </p>
+        </div>
+        <div class="p-2 bg-white shadow-md lg:col-span-2">
+            <img class="" src="images/watch.jfif" alt="watch pic">
+            <h1 class="font-bold text-lg ">Watch</h1>
+            <p class="text-gray-600">Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                Quidem voluptatum ex minima iusto, eum amet natus! Blanditiis id unde vitae, 
+                accusamus adipisci, quasi nesciunt sequi dolorem quidem quae, iste qui. Lorem 
+                ipsum dolor, sit amet consectetur adipisicing elit. Praesentium quisquam at similique neque? 
+                Aspernatur, facilis eaque voluptatum laborum dolorem et consequatur, debitis necessitatibus 
+                exercitationem eum expedita cupiditate harum.
+            </p>
+        </div>
     </div>
     
 
